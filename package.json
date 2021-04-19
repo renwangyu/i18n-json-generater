@@ -1,0 +1,25 @@
+{
+  "name": "i18n-json-generater",
+  "version": "1.0.0",
+  "description": "CLI to generate i18n JSON files",
+  "main": "index.js",
+  "bin": {
+    "lang": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "i18n",
+    "language"
+  ],
+  "author": "renwangyu",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.2.0",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0",
+    "xlsx": "^0.16.9"
+  }
+}
