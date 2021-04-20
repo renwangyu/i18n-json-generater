@@ -1,6 +1,6 @@
 {
   "name": "i18n-json-generater",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI to generate i18n JSON files",
   "main": "index.js",
   "bin": {
@@ -11,10 +11,17 @@
   },
   "keywords": [
     "i18n",
-    "language"
+    "language",
+    "revert",
+    "JSON"
   ],
   "author": "renwangyu",
   "license": "ISC",
+  "homepage": "https://github.com/renwangyu/i18n-json-generater/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renwangyu/i18n-json-generater"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^7.2.0",

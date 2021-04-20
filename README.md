@@ -18,7 +18,7 @@ npx i18n-json-generater create
 ```
 
 ### arguments
-+ The first prompt is to get the path of excel file. The Table of the excel file is something like follow:
++ The first prompt is to get the path of excel file. The Table of the excel file is something like below:
 
   A|B|C|D|E|F
   --|--|--|--|--|--
@@ -39,11 +39,40 @@ npx i18n-json-generater create
 
   - `all` is a special type because you can create all language of your table from the excel template file.
 
-+ The finally prompt is a confirm, tpye Y to continue and after a moment you will get the JSON files in the current directory.
++ The finally prompt is a confirm, type Y to continue and after a moment you will get the JSON files in the current directory.
+  The JSON files will be automatic generated. Take the chinese file(zh.json) as an example, its content like below:
+  ```json
+  {
+    "name": "爆爆",
+    "nationality": "中国",
+    "contact": "86 XXX XXXXXXX",
+    "address": {
+      "country": "中国",
+      "city": "上海"
+    },
+    "hobby": {
+      "food": {
+        "coke": "可乐",
+        "cake": "蛋糕"
+      },
+      "film": {
+        "action": "动作片",
+        "magic": "魔幻片"
+      }
+    },
+    "habby": {
+      "game": "电脑游戏"
+    }
+  }
+  ```
+  You can try to use the `lang-template.xlsx` file in the repository to get the result.
  
   > Now only supports generated files in the current directory
 
   ##### **Note: you should always set the `key` in the first column, that's very necessary and important.**
+
+### remark
+Always remember the first row in table is very important. It should include `key` in it. Anothers should be the language abbreviations of what you want to generated, such as `en`, `de`, `jp`, `fr` etc.
 
 ### todo
 + It's not support to specify the path of the generated files, I will support it in future.
