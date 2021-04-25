@@ -89,11 +89,6 @@ class Parser {
     }
     return result;
   }
-  
-  show() {
-    console.log('Parser show');
-    console.log(this.translationCache);
-  }
 }
 
 module.exports = Parser;
