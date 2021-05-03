@@ -14,9 +14,13 @@
     "film": {
       "action": "动作片",
       "magic": "魔幻片"
-    }
-  },
-  "habby": {
+    },
     "game": "电脑游戏"
+  },
+  "job": "程序员",
+  "usedTech": {
+    "js": "javascript",
+    "css": "css",
+    "h5": "html5"
   }
 }

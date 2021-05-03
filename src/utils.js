@@ -11,6 +11,21 @@ function recur(key, value, obj) {
   }
 }
 
+function recurJson(root, result = {}, preKeyArr = []) {
+  const keys = Object.keys(root);
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    if (typeof root[key] === 'object') {
+      const arr = [...preKeyArr, key];
+      recurJson(root[key], result, arr);
+    } else {
+      const jk = [...preKeyArr, key].join('.');
+      result[jk] = root[key];
+    }
+  }
+}
+
 module.exports = {
-  recur
+  recur,
+  recurJson
 };
