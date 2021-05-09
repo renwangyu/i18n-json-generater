@@ -10,14 +10,20 @@ npm i -g i18n-json-generater
 ```
 
 ### usage
-After installation, type command `lang create`, then follow the prompts. You can also use `npx` instead.
+After installation, type command `lang xxx`, then follow the prompts. You can also use `npx` instead.
 ```bash
 lang create
+lang extract
 // or
 npx i18n-json-generater create
+npx i18n-json-generater extract
 ```
+There are two kinds of command to use:
++ `lang create` Create JSON file for multilingual application.
++ `lang extract` Create XLSX file as translate template file, similar to an inverse operation.
 
 ### arguments
+#### 1. create (generate JSON file from XLSX file)
 + The first prompt is to get the path of excel file. The Table of the excel file is something like below:
 
   A|B|C|D|E|F
@@ -70,6 +76,13 @@ npx i18n-json-generater create
   > Now only supports generated files in the current directory
 
   ##### **Note: you should always set the `key` in the first column, that's very necessary and important.**
+
+#### 2. extract (generate XLSX file from JSON file)
++ The first prompt is to get the path of json file.You can also get [`lang-template.json`](./lang-template.json) in this repository to see the file format.
++ The secound prompt is to input the language abbreviation what translated in your JSON file, such as `zh`,`en`,`de` etc.
+  > What you type in this step, will be the table header column for your translation.
+
++ The finally prompt is a confirm, type Y to continue and after a moment you will get the XLSX file in the current directory.
 
 ### remark
 Always remember the first row in table is very important. It should include `key` in it. Anothers should be the language abbreviations of what you want to generated, such as `en`, `de`, `jp`, `fr` etc.

@@ -48,7 +48,11 @@ module.exports = function () {
   inquirer
     .prompt(questions)
     .then(answers => {
-      const { jsonFile, lang, ...rest } = answers;
+      const { jsonFile, lang, confirm, ...rest } = answers;
+      if (!confirm) {
+        output.error('Error: 请重新确认 (please confirm again)');
+        process.exit(1);
+      }
       const json = path.resolve(CURRENT_PATH, jsonFile);
       const ext = path.extname(json);
       const REG_EXT = new RegExp(`(${JSON_ALLOW_EXT.join('|')})$`, 'ig');
