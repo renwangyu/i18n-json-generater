@@ -1,0 +1,26 @@
+{
+  "name": "爆爆",
+  "nationality": "中国",
+  "contact": "86 XXX XXXXXXX",
+  "address": {
+    "country": "中国",
+    "city": "上海"
+  },
+  "hobby": {
+    "food": {
+      "coke": "可乐",
+      "cake": "蛋糕"
+    },
+    "film": {
+      "action": "动作片",
+      "magic": "魔幻片"
+    },
+    "game": "电脑游戏"
+  },
+  "job": "程序员",
+  "usedTech": {
+    "js": "javascript",
+    "css": "css",
+    "h5": "html5"
+  }
+}
