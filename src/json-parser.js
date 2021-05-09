@@ -15,10 +15,10 @@ class JsonParser {
   }
 
   initData() {
-    const { file } = this.opts;
+    const { file, lang } = this.opts;
     const content = fs.readFileSync(file, 'utf8');
     try {
-      this.fileName = path.basename(file).split('.').shift();
+      this.fileName = lang || path.basename(file).split('.').shift();
       this.fileExtName = path.extname(file);
       if (!~this.fileExtName.toLocaleLowerCase().indexOf('json')) {
         output.error(`Error: 不支持扩展名为${this.fileExtName}的文件，只支持.json文件 (Don't support the file that extend name is ${this.fileExtName}, only support .json)`)

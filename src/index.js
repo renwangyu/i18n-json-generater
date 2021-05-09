@@ -13,6 +13,8 @@ process.on('uncaughtException', function (e) {
 program
   .version(chalk.green(`${pkg.version}`))
   .name(pkg.name)
+
+program
   .command('create')
   .description('生成语言JSON文件 (create language JSON file)')
   .action(create);

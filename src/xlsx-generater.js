@@ -15,6 +15,7 @@ class XlsxGenerater {
     this.fileName = fileName;
     this.fileExtName = fileExtName;
     this.data = data;
+    this.excelObj = null;
   }
 
   translate() {
@@ -30,17 +31,18 @@ class XlsxGenerater {
     }
     const workSheet = XLSX.utils.json_to_sheet(arr, { header: [KEY, this.fileName] })
     XLSX.utils.book_append_sheet(workBook, workSheet, 'lang');// 向工作簿追加一个工作表
-    console.log(workBook);
-  }
-
-  getTranslateResult() {
-
+    this.excelObj = {
+      workBook,
+      workSheet
+    }
   }
 
   deposit(dist, opts = {}) {
     if (!dist) {
       return;
     }
+    const { workBook } = this.excelObj;
+    XLSX.writeFile(workBook, dist);
   }
 }
 
