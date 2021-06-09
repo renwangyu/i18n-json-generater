@@ -1,7 +1,7 @@
 const fs = require('fs');
 const XLSX = require('xlsx');
-const output = require('./output.js');
-const { KEY } = require('./constant.js');
+const output = require('../utils/output.js');
+const { KEY } = require('../utils/constant.js');
 
 class XlsxGenerater {
   constructor(opts) {

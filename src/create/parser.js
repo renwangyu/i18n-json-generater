@@ -1,7 +1,7 @@
 const XLSX = require('xlsx');
-const Constant = require('./constant.js');
-const output = require('./output.js');
-const { KEY, ALL} = require('./constant.js');
+const Constant = require('../utils/constant.js');
+const output = require('../utils/output.js');
+const { KEY, ALL} = require('../utils/constant.js');
 
 class Parser {
   constructor(opts) {

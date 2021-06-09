@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const output = require('./output.js');
-const { recurJson } = require('./utils.js');
+const output = require('../utils/output.js');
+const { recurJson } = require('../utils/tool.js');
 
 class JsonParser {
   constructor(opts) {

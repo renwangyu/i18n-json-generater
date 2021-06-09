@@ -1,9 +1,9 @@
 const pkg = require('../package.json');
 const { program } = require('commander');
 const chalk = require('chalk')
-const create = require('./create-lang-file.js');
-const extract = require('./extract-json-file.js');
-const output = require('../src/output.js');
+const create = require('./create/create-lang-file.js');
+const extract = require('./extract/extract-json-file.js');
+const output = require('./utils/output.js');
 
 /*处理异常*/
 process.on('uncaughtException', function (e) {

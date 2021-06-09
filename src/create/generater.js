@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { recur } = require('./utils.js');
+const { recur } = require('../utils/tool.js');
 
 class Generater {
   constructor(opts) {

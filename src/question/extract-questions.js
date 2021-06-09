@@ -1,6 +1,6 @@
 const questions = [{
   type: 'input',
-  name: 'jsonFile',
+  name: 'jsonFiles',
   message: '请输入.json语言模板文件的路径 (please enter the path of the .json file)',
 }, {
   type: 'input',
