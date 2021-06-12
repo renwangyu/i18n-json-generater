@@ -25,10 +25,6 @@ function recurJson(root, result = {}, preKeyArr = []) {
   }
 }
 
-function getUniqueKey(keyList) {
-
-}
-
 module.exports = {
   recur,
   recurJson
