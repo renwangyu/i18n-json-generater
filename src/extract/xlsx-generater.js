@@ -46,7 +46,6 @@ class XlsxGenerater {
       data.push(obj);
       isFirst = false;
     }
-    console.log(header)
     return { header, data };
   }
 

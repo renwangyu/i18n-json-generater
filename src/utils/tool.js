@@ -1,3 +1,7 @@
+const path = require('path');
+const fs = require('fs');
+const { JSON_ALLOW_EXT } = require('./constant.js');
+
 function recur(key, value, obj) {
   if (key.indexOf('.') > 0) { // 有"."的情况
     const arr = key.split('.');
@@ -25,7 +29,27 @@ function recurJson(root, result = {}, preKeyArr = []) {
   }
 }
 
+function getDepth0JsonFilesInDir(dir) {
+  const dirInfo = fs.readdirSync(dir);
+  const result = [];
+  for (let i = 0; i < dirInfo.length; i++) {
+    const item = dirInfo[i];
+    const p = path.resolve(dir, item);
+    console.log(path.join(dir, item))
+    const info = fs.statSync(p);
+    if (info.isFile()) {
+      const ext = path.extname(p);
+      const REG_EXT = new RegExp(`(${JSON_ALLOW_EXT.join('|')})$`, 'ig');
+      if (REG_EXT.test(ext)) {
+        result.push(p);
+      }
+    }
+  }
+  return result;
+}
+
 module.exports = {
   recur,
-  recurJson
+  recurJson,
+  getDepth0JsonFilesInDir
 };

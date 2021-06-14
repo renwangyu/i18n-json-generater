@@ -78,11 +78,15 @@ There are two kinds of command to use:
   ##### **Note: you should always set the `key` in the first column, that's very necessary and important.**
 
 #### 2. extract (generate XLSX file from JSON file)
-+ The first prompt is to get the path of json file.You can also get [`lang-template.json`](./lang-template.json) in this repository to see the file format.
++ The first prompt is to type the path of **JSON file** or the **Directory** which includes JSON files. You can also get [`lang-template.json`](./lang-template.json) in this repository to see the file format.
+You can parse multiple files or directories at once and separate with semicolons and commas, such as `./lang;./en.json`.
+Note that if it is a directory, only the json file in the current directory is parsed
 + The secound prompt is to input the language abbreviation what translated in your JSON file, such as `zh`,`en`,`de` etc.
   > What you type in this step, will be the table header column for your translation.
 
 + The finally prompt is a confirm, type Y to continue and after a moment you will get the XLSX file in the current directory.
+
+**If the key in a JSON file does not exist in other JSON files, the columns corresponding to other JSON files in the .xlsx file will be empty**
 
 ### remark
 Always remember the first row in table is very important. It should include `key` in it. Anothers should be the language abbreviations of what you want to generated, such as `en`, `de`, `jp`, `fr` etc.
