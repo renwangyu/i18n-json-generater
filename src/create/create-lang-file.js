@@ -3,11 +3,11 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const ora = require('ora');
 const spinner = ora('take a break ☕ \n');
-const output = require('./output.js');
-const { ALL, ALLOW_EXT } = require('./constant.js');
+const output = require('../utils/output.js');
+const { ALL, ALLOW_EXT } = require('../utils/constant.js');
 const Parser = require('./parser.js');
 const Generater = require('./generater.js');
-const questions = require('./create-questions.js');
+const questions = require('../question/create-questions.js');
 
 const CWD_PATH = process.cwd();
 const CURRENT_PATH = path.resolve(CWD_PATH, './');
