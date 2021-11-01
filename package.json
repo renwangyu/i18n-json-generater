@@ -1,6 +1,6 @@
 {
   "name": "i18n-json-generater",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "CLI to generate i18n JSON files",
   "main": "index.js",
   "bin": {
