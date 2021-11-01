@@ -3,6 +3,8 @@
 #### A **CLI tool** to create i18n JSON files from excel(*.xlsx) file.
 
 ![](https://static.renwangyu.com/imgs/i18n-demo.gif)
+> if the gif does't work, click [demo.gif](https://static.renwangyu.com/imgs/i18n-demo.gif) to view the original gif.
+
 
 ### install
 ```bash
